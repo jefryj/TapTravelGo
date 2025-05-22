@@ -1,0 +1,26 @@
+{
+  "name": "taptravelgo",
+  "version": "1.0.0",
+  "description": "A travel package application that displays various trip packages.",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "vite": "^3.0.0"
+  },
+  "keywords": [
+    "travel",
+    "packages",
+    "react",
+    "vite"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
