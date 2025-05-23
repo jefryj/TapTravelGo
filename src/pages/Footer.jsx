@@ -1,8 +1,8 @@
 function Footer(){
     return(
-<div className="Footer">
-<h1>Footer</h1>
-</div>
+        <div className="Footer">
+            <span>© 2024 taptravelgo. All rights reserved.</span>
+        </div>
     );
 }
 
