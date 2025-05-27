@@ -1,26 +1,37 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react'
 import Home from './pages/Home.jsx'
 import Footer from './pages/Footer'
 import Header from './pages/Header'
 import Contact from './pages/Contact.jsx'
 import AboutUs from './pages/AboutUs.jsx'
+import LoginPage from './pages/LoginPage.jsx'
 
 
 function App() {
   return (
-    <>
-      <Header/>
-      <div id="home">
-        <Home/>
-      </div>
-      <div id="aboutus">
-        <AboutUs/>
-      </div>
-      <div id="contact">
-        <Contact/>
-      </div>
-      <Footer/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/home" element={
+          <>
+            <Header/>
+            <div id="home">
+              <Home/>
+            </div>
+            <div id="aboutus">
+              <AboutUs/>
+            </div>
+            <div id="contact">
+              <Contact/>
+            </div>
+            <Footer/>
+          </>
+        } />
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="*" element={<Navigate to="/home" replace />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

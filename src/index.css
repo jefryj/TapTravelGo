@@ -16,7 +16,7 @@ body {
   /* Add a soft gradient background */
   background: linear-gradient(135deg, #f7e9e3 0%, #e3f0ff 100%);
   position: relative;
-  
+  padding-top: 60px; /* Add this if not present to prevent content from hiding under navbar */
 }
 
 /* Decorative SVG wave at the top */
@@ -44,14 +44,18 @@ body::after {
 .Header{
   font-family:Verdana, Geneva, Tahoma, sans-serif ;
   color: black;
-  position: static;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 60px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  top: 0;
   background: #1b5793;
   padding: 0.5rem 0;
+  box-shadow: 0 2px 16px rgba(27,87,147,0.08);
+  z-index: 1000;
 }
 
 .navbar {
@@ -60,7 +64,7 @@ body::after {
 
 .nav-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
     margin: 0;
@@ -79,6 +83,10 @@ body::after {
     letter-spacing: 2px;
     margin-right: 2rem;
     text-align: left;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
 }
 
 .nav-item a {

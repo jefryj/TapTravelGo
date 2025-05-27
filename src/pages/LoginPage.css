@@ -1,53 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
 .login-bg {
   min-height: 100vh;
-  background: linear-gradient(135deg, #e3f0ff 0%, #f7e9e3 100%);
+  background: url('https://images.pexels.com/photos/811029/pexels-photo-811029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 8vw;
+  position: relative;
+  z-index: 1;
+}
+
+/* Remove the overlay completely */
+.login-bg::before {
+  display: none;
+}
+
+.login-card,
+.login-left {
+  position: relative;
+  z-index: 1;
 }
 
 .login-card {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(27,87,147,0.12);
-  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(27,87,147,0.15), 0 1.5px 8px rgba(27,87,147,0.06);
+  padding: 2.8rem 2.2rem 2.2rem 2.2rem;
   width: 100%;
-  max-width: 350px;
+  max-width: 370px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.login-card:hover {
+  box-shadow: 0 12px 40px rgba(27,87,147,0.18), 0 2px 12px rgba(27,87,147,0.09);
 }
 
 .login-logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.2rem;
-}
-
-.plane-icon {
-  font-size: 2rem;
-  margin-right: 0.5rem;
+  display: none;
 }
 
 .brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1b5793;
-  letter-spacing: 2px;
+  display: none;
 }
 
 .login-title {
-  font-size: 1.4rem;
-  color: #c3a53a;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  color: #c850c0;
+  margin-bottom: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-shadow: 0 2px 8px #c3a53a22;
+  background: linear-gradient(90deg, #c850c0 0%, #4158d0 50%, #ffcc70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .login-form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.2rem;
 }
 
 .login-form label {
@@ -57,47 +75,54 @@
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  letter-spacing: 0.5px;
 }
 
 .login-form input {
-  padding: 0.7rem 1rem;
-  border: 1.5px solid #c3a53a;
-  border-radius: 8px;
+  padding: 0.8rem 1.1rem;
+  border: 1.5px solid #e3e3e3;
+  border-radius: 10px;
   font-size: 1rem;
   outline: none;
-  transition: border 0.2s;
   background: #f8fafc;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(27,87,147,0.03);
 }
 
 .login-form input:focus {
   border: 2px solid #1b5793;
+  background: #f0f6ff;
+  box-shadow: 0 2px 8px rgba(27,87,147,0.08);
 }
 
 .login-form button {
-  margin-top: 0.5rem;
-  padding: 0.7rem 0;
+  margin-top: 0.7rem;
+  padding: 0.8rem 0;
   background: linear-gradient(90deg, #1b5793 60%, #c3a53a 100%);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  border-radius: 10px;
+  font-size: 1.13rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(27,87,147,0.08);
+  letter-spacing: 1px;
 }
 
 .login-form button:hover {
   background: linear-gradient(90deg, #c3a53a 0%, #1b5793 100%);
+  box-shadow: 0 4px 16px rgba(27,87,147,0.13);
 }
 
 .login-footer {
-  margin-top: 1.2rem;
-  font-size: 0.97rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
   color: #555;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .signup-link {
@@ -109,4 +134,50 @@
 
 .signup-link:hover {
   color: #c3a53a;
+  text-decoration: underline;
+}
+
+.login-left {
+  max-width: 500px;
+  color: #2c87e3;
+  animation: fadeIn 1.2s ease-in-out;
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 2vw;
+  margin-right: auto;
+}
+
+.main-heading {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-family: Dosis;
+  
+
+}
+
+.sub-text {
+  font-size: 2.3rem;
+  margin-bottom: 0.7rem;
+  color: #00fd8b;
+  opacity: 0.85;
+  font-family: Dosis;
+  
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
