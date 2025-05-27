@@ -15,8 +15,8 @@ function AboutUs() {
             <h3>Meet the Team</h3>
             <ul>
                 <li><strong>Jefry Joseph</strong> – Founder & CEO</li>
-                <li><strong>Jane Doe</strong> – Lead Developer</li>
-                <li><strong>John Smith</strong> – Customer Success Manager</li>
+                <li><strong>Deril Jose</strong> – Lead Developer</li>
+                <li><strong>Geevar Saji</strong> – Customer Success Manager</li>
             </ul>
             <h3>Why Choose Us?</h3>
             <ul>

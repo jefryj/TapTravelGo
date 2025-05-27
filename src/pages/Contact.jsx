@@ -54,8 +54,8 @@ const Contact = () => {
         <div className="contact-info">
           <h3>Our Information</h3>
           <p>Email: info@taptravelgo.com</p>
-          <p>Phone: +1 234 567 890</p>
-          <p>Address: 123 Main St, City, Country</p>
+          <p>Phone: +91 8078342225</p>
+          <p>Address: 123 Second Street,Ernakulam,Kerala</p>
         </div>
       </div>
     </div>
