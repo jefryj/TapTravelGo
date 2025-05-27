@@ -9,15 +9,16 @@ import LoginPage from './pages/LoginPage.jsx'
 
 
 function App() {
+  const [search, setSearch] = useState('');
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/home" element={
           <>
-            <Header/>
+            <Header search={search} setSearch={setSearch} />
             <div id="home">
-              <Home/>
+              <Home search={search} setSearch={setSearch} />
             </div>
             <div id="aboutus">
               <AboutUs/>
