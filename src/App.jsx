@@ -9,12 +9,18 @@ import AboutUs from './pages/AboutUs.jsx'
 function App() {
   return (
     <>
-<Header/>
-<Home/>
-<AboutUs/>
-<Contact/>
-<Footer/>
-          </>
+      <Header/>
+      <div id="home">
+        <Home/>
+      </div>
+      <div id="aboutus">
+        <AboutUs/>
+      </div>
+      <div id="contact">
+        <Contact/>
+      </div>
+      <Footer/>
+    </>
   )
 }
 
