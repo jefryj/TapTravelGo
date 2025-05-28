@@ -57,7 +57,16 @@ function LoginPage() {
       </form>
       <div className="login-footer">
         <span>Don't have an account?</span>
-        <a href="#" className="signup-link">Sign Up</a>
+        <a
+          href="#"
+          className="signup-link"
+          onClick={e => {
+            e.preventDefault();
+            navigate('/signup');
+          }}
+        >
+          Sign Up
+        </a>
       </div>
     </div>
   </div>

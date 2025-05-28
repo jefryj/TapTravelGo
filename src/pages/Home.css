@@ -118,3 +118,27 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  width: 260px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.card-rate {
+  margin-top: 0.7rem;
+  font-size: 1.18rem;
+  font-weight: bold;
+  color: black;
+  background: #f7e9e3;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 6px #c3a53a22;
+}
